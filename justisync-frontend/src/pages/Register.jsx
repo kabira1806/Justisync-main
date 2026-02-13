@@ -19,7 +19,7 @@ export default function Register() {
 
     try {
       // FIX 1: Use 127.0.0.1 instead of localhost to stop "Failed to fetch"
-      const response = await fetch("https://justisync-main.vercel.app/", {
+      const response = await fetch("http://127.0.0.1:5000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // FIX 2: Send 'role' so the backend knows if it's a Client/Lawyer

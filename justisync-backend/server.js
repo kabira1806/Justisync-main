@@ -8,15 +8,8 @@ require('./db');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: "https://justisync-main-uck7.vercel.app", // Yahan apna frontend URL daalein
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("JustiSync Backend is LIVE 🚀");
-});
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
